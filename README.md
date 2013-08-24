@@ -1,4 +1,33 @@
 NumVis
 ======
 
-Python LIbrary to visualize hexadecimal and binary groupings of a numeric data type
+Python Library to visualize hexadecimal and binary groupings of a numeric data type.
+
+    >>> from numvis import NumVis
+    >>> # Can be regular integer, long, hex number or binary number
+    >>> number = NumVis(0xf5fa)
+    >>> number
+     0xf5faL
+        
+    >>> number.hex()
+     (9B per line):
+     00 00000000 00000000                                              [0575:0504]
+     00 00000000 00000000                                              [0503:0432]
+     00 00000000 00000000                                              [0431:0360]
+     00 00000000 00000000                                              [0359:0288]
+     00 00000000 00000000                                              [0287:0216]
+     00 00000000 00000000                                              [0215:0144]
+     00 00000000 00000000                                              [0143:0072]
+     00 00000000 0000F5FA                                              [0071:0000]
+        
+        
+    >>> number.bin()
+     (16b per line)
+     0000 0000 0000 0000                                               [0127:0112]
+     0000 0000 0000 0000                                               [0111:0096]
+     0000 0000 0000 0000                                               [0095:0080]
+     0000 0000 0000 0000                                               [0079:0064]
+     0000 0000 0000 0000                                               [0063:0048]
+     0000 0000 0000 0000                                               [0047:0032]
+     0000 0000 0000 0000                                               [0031:0016]
+     1111 0101 1111 1010                                               [0015:0000]
